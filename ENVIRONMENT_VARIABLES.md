@@ -3,7 +3,7 @@
 ## 🌐 URLs Descobertas
 
 - **Backend (Render)**: `https://cineai-axkg.onrender.com`
-- **Frontend (Vercel)**: `https://seu-frontend.vercel.app` *(substitua pela URL real)*
+- **Frontend (Vercel)**: `https://cineai.vercel.app` *(URL real do seu frontend)*
 
 ---
 
@@ -33,8 +33,8 @@
 |-----|-------|
 | `FLASK_ENV` | `production` |
 | `DATABASE_URL` | `sqlite:///video_generator.db` |
-| `CORS_ORIGINS` | `https://seu-frontend.vercel.app` |
-| `FRONTEND_URL` | `https://seu-frontend.vercel.app` |
+| `CORS_ORIGINS` | `https://cineai.vercel.app` |
+| `FRONTEND_URL` | `https://cineai.vercel.app` |
 | `SECRET_KEY` | `cineai-secret-key-production-2024-ultra-secure` |
 | `JWT_SECRET_KEY` | `cineai-jwt-secret-key-production-2024-ultra-secure` |
 
@@ -66,7 +66,7 @@ curl https://cineai-axkg.onrender.com/api/health
 
 ### 2. Testar CORS:
 ```bash
-curl -H "Origin: https://seu-frontend.vercel.app" \
+curl -H "Origin: https://cineai.vercel.app" \
      -H "Access-Control-Request-Method: POST" \
      -X OPTIONS \
      https://cineai-axkg.onrender.com/api/auth/login
