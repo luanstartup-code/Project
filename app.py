@@ -168,7 +168,7 @@ def create_app(config_name=None):
             }
         })
     
-        return app
+    return app
 
 if __name__ == '__main__':
     app = create_app()
@@ -179,28 +179,37 @@ if __name__ == '__main__':
         from src.models.user import User
         from src.models.avatar import Avatar
         from src.models.scene import Scene
-        from src.models.project import Project
         from src.models.video import Video
+        from src.models.session import Session
+        from src.models.message import Message
         
+        # Criar tabelas apenas se não existirem
         db.create_all()
+        print("✅ Database tables created/verified")
         
-        # Criar usuário admin padrão se não existir
-        admin_email = os.getenv('ADMIN_EMAIL', 'admin@aistudio.com')
-        admin_password = os.getenv('ADMIN_PASSWORD', 'admin123')
-        
-        admin_user = User.query.filter_by(email=admin_email).first()
-        if not admin_user:
-            admin_user = User(
-                email=admin_email,
-                password_hash=auth_manager.hash_password(admin_password),
-                name='Administrator',
-                is_admin=True,
-                is_active=True,
-                is_verified=True
-            )
-            db.session.add(admin_user)
-            db.session.commit()
-            print(f"✅ Usuário admin criado: {admin_email}")
+        # Verificar se usuário admin existe (com tratamento de erro)
+        try:
+            admin_email = os.getenv('ADMIN_EMAIL', 'admin@cineai.com')
+            admin_password = os.getenv('ADMIN_PASSWORD', 'CineAI2024!Admin')
+            
+            admin_user = User.query.filter_by(email=admin_email).first()
+            if not admin_user:
+                admin_user = User(
+                    email=admin_email,
+                    password_hash=auth_manager.hash_password(admin_password),
+                    name='Administrator',
+                    is_admin=True,
+                    is_verified=True,
+                    is_active=True
+                )
+                db.session.add(admin_user)
+                db.session.commit()
+                print(f"✅ Admin user created: {admin_email}")
+            else:
+                print(f"✅ Admin user already exists: {admin_email}")
+        except Exception as e:
+            print(f"⚠️ Could not verify/create admin user: {e}")
+            print("💡 You can create admin user manually later")
         
         print(f"🚀 Servidor iniciado no ambiente: {os.getenv('FLASK_ENV', 'development')}")
         print(f"📊 Banco de dados: {app.config['SQLALCHEMY_DATABASE_URI']}")
