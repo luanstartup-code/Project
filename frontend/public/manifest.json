@@ -1,0 +1,29 @@
+{
+  "short_name": "CineAI",
+  "name": "CineAI - AI Video Studio Platform",
+  "description": "Plataforma de criação de vídeos com Inteligência Artificial",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0ea5e9",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "categories": ["entertainment", "productivity", "utilities"],
+  "lang": "pt-BR"
+}
