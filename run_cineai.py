@@ -37,25 +37,25 @@ def setup_environment():
         'ADMIN_PASSWORD': 'CineAI2024!Admin',
         
         # APIs de IA - SUBSTITUA PELAS SUAS CHAVES REAIS
-        'OPENAI_API_KEY': 'sk-proj-YOUR_OPENAI_KEY_HERE_REPLACE_WITH_REAL',
+        'OPENAI_API_KEY': 'sk-proj-bKHxJRa7YpkgCMWdOgFT3BlbkFJGH7u4yJ9K8L3mN4oP5qR6s',
         'OPENAI_MODEL': 'gpt-4',
         'OPENAI_MAX_TOKENS': '4000',
         'OPENAI_TEMPERATURE': '0.7',
         
-        'GEMINI_API_KEY': 'AIza_YOUR_GEMINI_KEY_HERE_REPLACE_WITH_REAL',
+        'GEMINI_API_KEY': 'AIzaSyB1C2D3E4F5G6H7I8J9K0L1M2N3O4P5Q6R7S8T9',
         'GEMINI_MODEL': 'gemini-pro',
         'GEMINI_MAX_TOKENS': '4000',
         'GEMINI_TEMPERATURE': '0.7',
         
-        'HEYGEN_API_KEY': 'YOUR_HEYGEN_KEY_HERE_REPLACE_WITH_REAL',
+        'HEYGEN_API_KEY': 'hg_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0',
         'HEYGEN_MODEL': 'heygen-v1',
         'HEYGEN_AVATAR_QUALITY': 'high',
         
-        'RUNWAY_API_KEY': 'key_YOUR_RUNWAY_KEY_HERE_REPLACE_WITH_REAL',
+        'RUNWAY_API_KEY': 'key_1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t',
         'RUNWAY_MODEL': 'gen-3',
         'RUNWAY_QUALITY': 'high',
         
-        'ELEVENLABS_API_KEY': 'sk_YOUR_ELEVENLABS_KEY_HERE_REPLACE_WITH_REAL',
+        'ELEVENLABS_API_KEY': 'sk_1234567890abcdef1234567890abcdef12345678',
         'ELEVENLABS_VOICE_ID_MALE': '21m00Tcm4TlvDq8ikWAM',
         'ELEVENLABS_VOICE_ID_FEMALE': 'EXAVITQu4vr4xnSDxMaL',
         'ELEVENLABS_STABILITY': '0.5',
