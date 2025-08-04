@@ -1,34 +1,34 @@
 # 🎬 CineAI - AI Video Studio Platform
-# Dependências Python essenciais
+# Dependências Python para Python 3.11.10
 
 # Web Framework
-Flask==3.0.0
+Flask==2.3.3
 Flask-CORS==4.0.0
 
 # Database
-SQLAlchemy==2.0.25
-Flask-SQLAlchemy==3.1.1
+SQLAlchemy==2.0.23
+Flask-SQLAlchemy==3.0.5
 
 # Authentication
 PyJWT==2.8.0
 bcrypt==4.1.2
-cryptography==42.0.8
+cryptography>=41.0.0
 
 # Environment Management
 python-dotenv==1.0.0
 
 # AI APIs
-openai==1.6.1
-google-generativeai==0.3.2
+openai>=1.0.0
+google-generativeai>=0.3.0
 
 # HTTP Requests
-requests==2.31.0
+requests>=2.31.0
 
 # Data Processing
-Pillow==10.2.0
+Pillow>=10.0.0
 
 # Production Server
 gunicorn==21.2.0
 
 # Development
-python-dateutil==2.8.2
+python-dateutil>=2.8.0
