@@ -212,7 +212,18 @@ if __name__ == '__main__':
         print(f"🎥 Runway: {'✅ Configurado' if os.getenv('RUNWAY_API_KEY') else '❌ Não configurado'}")
         print(f"🎤 ElevenLabs: {'✅ Configurado' if os.getenv('ELEVENLABS_API_KEY') else '❌ Não configurado'}")
     
-    # Executar aplicação
+    # Para desenvolvimento local
+    if os.getenv('FLASK_ENV') == 'development':
+        port = int(os.getenv('PORT', 5000))
+        app.run(host='0.0.0.0', port=port, debug=True)
+    
+    return app
+
+# Criar aplicação para produção (WSGI)
+app = create_app()
+
+# Ponto de entrada para desenvolvimento
+if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
     debug_mode = os.getenv('FLASK_ENV') == 'development'
     app.run(host='0.0.0.0', port=port, debug=debug_mode)
