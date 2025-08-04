@@ -5,7 +5,7 @@
 .env.local
 .env.production
 setup_real_keys.py
-run_cineai.py
+API_KEYS_REPLACE.txt
 instance/
 *.db
 *.sqlite
